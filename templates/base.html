@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    $(document).on("scroll", function(){
+      if
+        ($(document).scrollTop() > 86){
+        $("#banner").addClass("shrink");
+      }
+      else
+      {
+        $("#banner").removeClass("shrink");
+      }
+    });
+  </script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Mirror</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css') }}" />
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+      <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand" href="#" style="background-image: url('https://i.ytimg.com/vi/Dicf2WKbf2Y/maxresdefault.jpg');"></a>
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#body">Skin Classifier</a>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" href="#body">Hair Classifier</a>
+          </li>     
+        </ul>
+      </div>
+      </div>
+    </nav>
+  </head>
+
+  <div class="banner">
+    <div class="container">
+    <div class="banner-text">
+    <div class="banner-heading">
+    Glad to see you here !
+    </div>
+    <div class="banner-sub-heading">
+      Mirror Mirror on the Wall
+    </div>
+    <button type="button" class="btn btn-warning text-dark btn-banner">Get started</button>
+    </div>
+    </div>
+  </div>
+  
+  <section id="about">
+  <div class="container">
+    <div class="text-intro">
+      <div class="jumbotron " style = 'padding: 5px;'>
+        <h3 style="text-align: center;">About Us</h3>
+    </div>
+      <p>To develop a  system which can not only detect emotions of person but can also provide feedback accordingly. It will have an AR based interface  for beautifying, grooming and trying on apparels.It will have a complete speech interface to interact. Apart from all this it will have miscellaneous features like setting reminders , time , weather forecast ,emergency calling service etc. 
+      </p>
+    </div>
+  </div>
+  <body>
+    <br>
+    {% block content %}{% endblock %}
+   </body>
+   
+   <footer style="background-color:#01355b ;padding: 20px;
+   margin-top: 20px;
+   color: black;
+   text-align: center;">
+    <p style="color: white;font-size:20px;">Mirror Mirror, Copyright &copy;  2020</p>
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+  </footer>
+   </<html>
+     

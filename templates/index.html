@@ -1,0 +1,82 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+<div class="main">
+  <div class="title">
+     <h2>Skin Classifier</h2>
+  </div>
+
+  <div class="panel">
+    <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" />
+    <label for="file-upload" id="file-drag" class="upload-box">
+      <div id="upload-caption">Drop image here or click to select</div>
+      <img id="image-preview" class="hidden" />
+    </label>
+  </div>
+  <div style="margin-bottom: 2rem;">
+    <input type="button" value="Submit" class="button" onclick="submitImage();" />
+    <input type="button" value="Clear" class="button" onclick="clearImage();" />
+  </div>
+
+  <div id="image-box">
+    <img id="image-display" />
+    <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
+</div>
+
+
+</div>
+<br><br>
+
+<div class="container" >
+    <div class="jumbotron " style = 'padding: 5px;'>
+        <h3 style="text-align: center;">Skin Result</h3>
+    </div>
+</div>
+    <div class="container"  style="background-color: blanchedalmond;">
+        <div id="pred-result" ></div>
+  </div>
+  
+
+  <div class="container">
+    <div class="main">
+      <div class="title">
+         <h2>Hair Classifier</h2>
+      </div>
+    
+      <div class="panel">
+        <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" />
+        <label for="file-upload" id="file-drag" class="upload-box">
+          <div id="upload-caption">Drop image here or click to select</div>
+          <img id="image-preview" class="hidden" />
+        </label>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <input type="button" value="Submit" class="button" onclick="submitImage();" />
+        <input type="button" value="Clear" class="button" onclick="clearImage();" />
+      </div>
+    
+      <div id="image-box">
+        <img id="image-display" />
+        <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
+          <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+        </svg>
+      </div>
+    </div>
+    
+    
+    </div>
+    <br><br>
+    
+    <div class="container" >
+        <div class="jumbotron " style = 'padding: 5px;'>
+            <h3 style="text-align: center;">Hair Result</h3>
+        </div>
+    </div>
+        <div class="container"  style="background-color: blanchedalmond;">
+            <div id="pred-result" ></div>
+      </div>
+      
+    
+{% endblock %}
